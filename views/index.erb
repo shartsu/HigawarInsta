@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ShowInstaPhoto:)</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <style type="text/css">
+    
+    .frame{
+    	background-color: #ffffff;
+    	display: inline-block;
+        box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
+        border: 10px solid #fff;
+        border-radius: 10px;
+    }
+    
+    img {
+        max-width : 100% ;
+        height : auto ;
+    }
+    
+    .some-element{
+	    width:100vw;
+	    height:100%;
+    	position: fixed;
+    	top:0;
+    	left:0;
+    	z-index:-1;
+    }
+    </style>
+</head>
+<body>
+    
+    <br>
+    <div align="center">
+        
+    <div class="frame">
+    <img src="<%= @imageurl %>">
+    <br>
+    <p>ー <%= @imagecaption %> ー</p>
+    </div>
+    
+    <br><br>
+    #IF above photo doesn't show up correctly, please find a following link. <br>
+    <a href="/oauth/connect">Connect with Instagram</a><br>
+    </div>
+    
+    <!-- Following code is put here intentionally -->
+    <div class='some-element'></div>    
+
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/background-blur.js"></script>
+    <script>
+    $(document).ready(function() {
+    	$('body').fadeIn(2000);
+    	
+    	$('.some-element').backgroundBlur({
+            imageURL : '<%= @imageurl %>',
+            blurAmount : 50,
+            imageClass : 'bg-blur',
+        });
+    });
+    </script>
+
+</body>
+</html>

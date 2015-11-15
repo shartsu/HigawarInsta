@@ -1,0 +1,7 @@
+*.sh
+*.h
+r/bundle
+db/*.db
+*.db
+.DS_Store
+.ruby-version
