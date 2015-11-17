@@ -3,9 +3,7 @@
 **HigawarInsta** is a Sinatra based web app shows one of your **"lovely"** instagram pics every day. 
 Pics are picked randomly up from your associated account via **the instagram API**, so it's like **"日替わり" (HIGAWARI)** in Japanese. 
 
-![ScreenShot](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png)
-
-https://raw.githubusercontent.com/shartsu/HigawarInsta/ff07f0331f0b2685d82519b448d276f2ac005051/SC.png
+![ScreenShot](https://raw.githubusercontent.com/shartsu/HigawarInsta/ff07f0331f0b2685d82519b448d276f2ac005051/SC.png)
 
 Hope you enjoy HIGAWARI instalife :)
 
